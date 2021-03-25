@@ -1,0 +1,82 @@
+body {
+    background-color: #191919;
+    overflow: hidden;
+}
+
+body > div {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+p {
+    display: inline-flex;
+    padding: 10px;
+}
+
+p, button {
+    color: #8a8a8a;
+    font-family: 'Recursive', sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.twelve-hour {
+    margin: 25px;
+}
+
+button {
+    background: none;
+    border: 1px solid white;
+    cursor: pointer;
+    padding: 10px;
+}
+
+button:hover{
+    color: #ffffff;
+    background-color: #00da83;
+}
+
+.current-time, .active-day, .active{
+    color: #00ff97;
+}
+
+.current-time{
+    font-size: 150px;
+}
+
+@media screen and (max-width: 1224px){
+    .current-time{
+        font-size: 100px;
+    }
+    p, button{
+        font-size: 20px;
+        margin: 10px auto;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .days p{
+        display: none;
+    }
+    .days p.active-day{
+        display: block;
+    }
+
+    .current-time{
+        font-size: 45px;
+        margin: 10px auto;
+    }
+
+    p, button{
+        font-size: 15px;
+    }
+
+    .twelve-hour {
+        margin: 5px;
+    }
+}
